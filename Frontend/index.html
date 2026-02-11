@@ -7,10 +7,12 @@
     <title>KisanSarthi - Build Financial Resilience Across Every Crop Season</title>
     <meta name="description"
         content="KisanSarthi is an offline-first, gamified financial learning platform designed for farmers to build financial resilience through crop cycle simulations.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Noto+Sans+Bengali:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -28,16 +30,24 @@
 
                 <!-- Navigation Links -->
                 <div class="nav-links" id="navLinks">
-                    <a href="#features" class="nav-link">Features</a>
-                    <a href="#how-it-works" class="nav-link">How It Works</a>
-                    <a href="#ai-assistant" class="nav-link">AI Assistant</a>
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="#features" class="nav-link" data-i18n="nav_features">Features</a>
+                    <a href="#how-it-works" class="nav-link" data-i18n="nav_how_it_works">How It Works</a>
+                    <a href="#ai-assistant" class="nav-link" data-i18n="nav_ai_assistant">AI Assistant</a>
+                    <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
                 </div>
 
-                <!-- Auth Buttons -->
-                <div class="nav-auth">
-                    <button class="btn btn-outlined" id="signin-btn">Sign In</button>
-                    <button class="btn btn-primary btn-signup" id="signup-btn">Sign Up</button>
+                <div class="nav-actions">
+                    <div class="lang-selector" role="group" aria-label="Language selector">
+                        <button class="lang-btn" type="button" data-lang="en" aria-pressed="true">EN</button>
+                        <button class="lang-btn" type="button" data-lang="hi" aria-pressed="false">हिंदी</button>
+                        <button class="lang-btn" type="button" data-lang="bn" aria-pressed="false">বাংলা</button>
+                    </div>
+
+                    <!-- Auth Buttons -->
+                    <div class="nav-auth">
+                        <button class="btn btn-outlined" id="signin-btn" data-i18n="nav_signin">Sign In</button>
+                        <button class="btn btn-primary btn-signup" id="signup-btn" data-i18n="nav_signup">Sign Up</button>
+                    </div>
                 </div>
 
                 <!-- Mobile Menu Toggle -->
@@ -55,17 +65,17 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Build Financial Resilience Across Every Crop Season</h1>
-                    <p class="hero-subtitle">Learn smart financial decisions through realistic farming simulations.
+                    <h1 class="hero-title" data-i18n="hero_title">Build Financial Resilience Across Every Crop Season</h1>
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">Learn smart financial decisions through realistic farming simulations.
                         Practice managing money across planting, growing, and harvest seasons—risk-free!</p>
                     <div class="hero-buttons">
                         <button class="btn btn-primary" id="start-simulation-btn">
                             <span class="btn-icon">🌱</span>
-                            Start Simulation
+                            <span class="btn-text" data-i18n="hero_start_simulation">Start Simulation</span>
                         </button>
                         <button class="btn btn-secondary" id="meet-sarthi-btn">
                             <span class="btn-icon">🤖</span>
-                            Meet Sarthi AI
+                            <span class="btn-text" data-i18n="hero_meet_sarthi">Meet Sarthi AI</span>
                         </button>
                     </div>
                 </div>
@@ -112,7 +122,7 @@
     <!-- How It Works Section -->
     <section class="how-it-works" id="how-it-works">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
+            <h2 class="section-title" data-i18n="section_how_it_works">How It Works</h2>
             <p class="section-subtitle">Your journey to financial mastery in 4 simple steps</p>
             <div class="steps-grid">
                 <div class="step-card" data-step="1">
@@ -150,7 +160,7 @@
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">Powerful Features for Farmers</h2>
+            <h2 class="section-title" data-i18n="section_features">Powerful Features for Farmers</h2>
             <p class="section-subtitle">Everything you need to master financial planning</p>
             <div class="features-grid">
                 <div class="feature-card">
@@ -205,11 +215,11 @@
                 <div class="cta-buttons">
                     <button class="btn btn-primary btn-large" id="cta-start-btn">
                         <span class="btn-icon">🌱</span>
-                        Start Simulation
+                        <span class="btn-text" data-i18n="cta_start_simulation">Start Simulation</span>
                     </button>
                     <button class="btn btn-outlined btn-white" id="cta-learn-btn">
                         <span class="btn-icon">📚</span>
-                        Learn More
+                        <span class="btn-text" data-i18n="cta_learn_more">Learn More</span>
                     </button>
                 </div>
             </div>
@@ -240,7 +250,7 @@
                     </div>
                 </div>
                 <div class="ai-text">
-                    <h2 class="section-title">Meet Sarthi AI</h2>
+                    <h2 class="section-title" data-i18n="section_ai_assistant">Meet Sarthi AI</h2>
                     <p class="ai-intro">Your friendly farming financial companion</p>
                     <div class="ai-features">
                         <div class="ai-feature-item">
@@ -262,7 +272,7 @@
                     </div>
                     <button class="btn btn-primary" id="try-sarthi-btn">
                         <span class="btn-icon">💬</span>
-                        Chat with Sarthi
+                        <span class="btn-text" data-i18n="cta_chat_with_sarthi">Chat with Sarthi</span>
                     </button>
                 </div>
             </div>
@@ -272,7 +282,7 @@
     <!-- Testimonials Section -->
     <section class="testimonials" id="stories">
         <div class="container">
-            <h2 class="section-title">Trusted by Indian Farmers</h2>
+            <h2 class="section-title" data-i18n="section_testimonials">Trusted by Indian Farmers</h2>
             <p class="section-subtitle">Real stories of financial resilience</p>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
@@ -315,7 +325,7 @@
     <!-- Dashboard Preview Section -->
     <section class="dashboard-preview" id="dashboard">
         <div class="container">
-            <h2 class="section-title">Your Financial Dashboard</h2>
+            <h2 class="section-title" data-i18n="section_dashboard">Your Financial Dashboard</h2>
             <p class="section-subtitle">Track everything in one beautiful interface</p>
             <div class="dashboard-mockup">
                 <div class="dashboard-header">
