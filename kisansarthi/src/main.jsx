@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import './styles.css'
 import './react-overrides.css'
 import App from './App.jsx'
-import { AuthProvider } from './context/useAuth'
+import { AuthProvider } from './context/AuthContext'
 import { LanguageProvider } from './context/LanguageContext'
 import { ToastProvider } from './context/ToastContext'
 
