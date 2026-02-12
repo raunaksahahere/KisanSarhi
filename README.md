@@ -12,7 +12,7 @@ KisanSarthi is a responsive landing page refactored into a modular, scalable **R
 
 ```
 Kisan/
-  kisansarthi-react/
+  kisansarthi/
     public/
     src/
       components/
@@ -26,7 +26,9 @@ Kisan/
 ## Run Locally
 
 From the repository root:
-
+```bash
+cd kisansarthi
+```
 ```powershell
 npm install
 npm run dev
@@ -36,7 +38,6 @@ Open the URL printed by Vite (typically http://127.0.0.1:5173/).
 
 ## Notes
 
-- Language selection persists via localStorage.
-- Toast notifications replace manual DOM toast creation.
-- Scroll-triggered animations are handled by Framer Motion.
-
+- **Language Selection**: Users can switch between English and Hindi and Bengali. The selection is saved in localStorage.
+- **Toast Notifications**: Success and error messages are displayed using a custom toast component.
+- **Scroll Animations**: Framer Motion is used to animate components on scroll.
