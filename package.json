@@ -1,0 +1,13 @@
+{
+  "name": "kisansarthi",
+  "private": true,
+  "workspaces": [
+    "kisansarthi"
+  ],
+  "scripts": {
+    "dev": "npm --workspace kisansarthi run dev",
+    "build": "npm --workspace kisansarthi run build",
+    "lint": "npm --workspace kisansarthi run lint",
+    "preview": "npm --workspace kisansarthi run preview"
+  }
+}

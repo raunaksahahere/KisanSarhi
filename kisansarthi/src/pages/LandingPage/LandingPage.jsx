@@ -1,6 +1,5 @@
 import Navbar from '../../components/Navbar/Navbar'
 import Hero from '../../components/Hero/Hero'
-import ToastHost from '../../components/Toast/ToastHost'
 import AiAssistantSection from './sections/AiAssistantSection'
 import CtaBannerSection from './sections/CtaBannerSection'
 import DashboardPreviewSection from './sections/DashboardPreviewSection'
@@ -25,8 +24,6 @@ export default function LandingPage() {
         <DashboardPreviewSection />
       </main>
       <FooterSection />
-      <ToastHost />
     </>
   )
 }
-

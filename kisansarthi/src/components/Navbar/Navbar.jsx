@@ -1,13 +1,13 @@
 import { useMemo, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useNavbarScrolled } from '../../hooks/useNavbarScrolled'
-import { useToast } from '../../hooks/useToast'
 import { useTranslation } from '../../hooks/useTranslation'
 
 export default function Navbar() {
   const isScrolled = useNavbarScrolled(50)
-  const { showToast } = useToast()
   const { language, setLanguage, t } = useTranslation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const navigate = useNavigate()
 
   const navLinks = useMemo(
     () => [
@@ -76,18 +76,24 @@ export default function Navbar() {
 
             <div className="nav-auth">
               <button
-                className="btn btn-outlined"
                 type="button"
-                onClick={() => showToast('🔐 Sign In feature coming soon!')}
+                className="btn btn-outlined"
                 data-i18n="nav_signin"
+                onClick={() => {
+                  setIsMenuOpen(false)
+                  navigate('/login')
+                }}
               >
                 {t('nav_signin')}
               </button>
               <button
-                className="btn btn-primary btn-signup"
                 type="button"
-                onClick={() => showToast('📝 Sign Up feature coming soon!')}
+                className="btn btn-primary btn-signup"
                 data-i18n="nav_signup"
+                onClick={() => {
+                  setIsMenuOpen(false)
+                  navigate('/login?mode=signup')
+                }}
               >
                 {t('nav_signup')}
               </button>

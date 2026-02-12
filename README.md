@@ -25,11 +25,17 @@ Kisan/
 
 ## Run Locally
 
-From the repository root:
-```bash
-cd kisansarthi
-```
+**Option A (recommended): run from repo root (npm workspaces)**
+
 ```powershell
+npm install
+npm run dev
+```
+
+**Option B: run from the app folder**
+
+```powershell
+cd kisansarthi
 npm install
 npm run dev
 ```
