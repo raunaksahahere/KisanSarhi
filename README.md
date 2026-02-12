@@ -1,45 +1,42 @@
-# KisanSarthi (Frontend)
+# KisanSarthi
 
-A static landing page for **KisanSarthi** — an offline-first, gamified financial learning concept for farmers, presented as a responsive website built with plain **HTML / CSS / JavaScript**.
+KisanSarthi is a responsive landing page refactored into a modular, scalable **React** app using **Vite**.
 
-## What’s Inside
+## Tech Stack
 
-- Navigation with smooth scrolling and a mobile menu
-- Hero + marketing sections (features, how it works, AI assistant)
-- Scroll-triggered animations and simple toast notifications
-- A “dashboard” UI mockup (static preview)
+- React (Vite)
+- Framer Motion (scroll/entrance animations)
+- Context + hooks (language + toasts)
 
 ## Project Structure
 
 ```
 Kisan/
-  Frontend/
-    index.html
-    styles.css
-    script.js
+  kisansarthi-react/
+    public/
+    src/
+      components/
+      context/
+      hooks/
+      data/
+      pages/
+      services/
 ```
 
 ## Run Locally
 
-### Option 1: Open the file directly
-
-Open `Frontend/index.html` in your browser.
-
-### Option 2: Serve via a local HTTP server (recommended)
-
 From the repository root:
 
 ```powershell
-cd .\Frontend
-python -m http.server 5173
+npm install
+npm run dev
 ```
 
-Then open:
-
-- http://localhost:5173/
+Open the URL printed by Vite (typically http://127.0.0.1:5173/).
 
 ## Notes
 
-- The “Sign In / Sign Up / Simulation” actions are placeholders and currently show notifications.
-- No build step or package manager is required.
+- Language selection persists via localStorage.
+- Toast notifications replace manual DOM toast creation.
+- Scroll-triggered animations are handled by Framer Motion.
 
